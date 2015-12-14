@@ -1,4 +1,6 @@
 #![no_std]
+#![allow(dead_code)]
+#![allow(unused_mut)]
 
 enum VgaColor {
     Black = 0,
@@ -24,13 +26,10 @@ fn make_color(fg: VgaColor, bg: VgaColor) -> u8 {
 }
 
 fn make_vgaentry(ch: char, col: u8) -> u16 {
-    let ch16: u16 = ch as u16;
-    let col16: u16 = col as u16;
     ch as u16 | (col as u16) << 8
 }
 
 fn strlen(c_string: &str) -> u32 {
-    let mut ret: u32 = 0;
     let bytes: &[u8] = c_string.as_bytes();
     bytes.len() as u32
 }
