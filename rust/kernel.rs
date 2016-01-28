@@ -47,7 +47,7 @@ struct TermSize {
 struct Buffer {
     buffer: *mut u16,
 }
- 
+
 struct Term {
     pos: TermPos,
     size: TermSize,
@@ -159,7 +159,7 @@ impl Term {
     fn row(&self) -> u32 {
         self.pos.row
     }
-    
+
     fn col(&self) -> u32 {
         self.pos.col
     }
