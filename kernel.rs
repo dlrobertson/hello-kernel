@@ -142,7 +142,7 @@ impl Term {
         let mut term: Term = Term {
             pos: TermPos::new(),
             size: TermSize::new(),
-            color: make_color(VgaColor::Red, VgaColor::Black),
+            color: make_color(VgaColor::Black, VgaColor::Red),
             buffer: Buffer::new(0xb8000 as *mut u16),
         };
         term
@@ -210,5 +210,5 @@ pub extern fn kernel_main() -> () {
     let mut term: Term = Term::new();
     term.initialize();
     term.reset_cursor();
-    term.write_string("Hello, World!");
+    term.write_string("Hello, World! A Simple Kernel Written in Rust");
 }
