@@ -1,3 +1,5 @@
+; A simple kernel written in LLVM IR
+
 @.str1 = private unnamed_addr constant [34 x i8] c"A Simple Kernel Written in LLVM IR"
 
 %Term = type <{i32, i32, i8, i16*}>
