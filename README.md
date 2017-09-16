@@ -2,9 +2,9 @@
 
 
 ```sh
-make llvm # build the kernel written in LLVM
+BUILD=llvm make # build the kernel written in LLVM
 
-make rust # build the kernel written in Rust
+BUILD=rust make # build the kernel written in Rust
 
-make run # run the kernel previously built with qemu
+BUILD=llvm make run # run the kernel written in LLVM
 ```
